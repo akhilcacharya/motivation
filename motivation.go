@@ -9,7 +9,7 @@ import (
 
 func main() {
 	rand.Seed(time.Now().UTC().Unix())
-	index := rand.Intn(len(quotes.Quotes))
+	index := rand.Intn(len(quotes.Quotes) - 1)
 	quote := quotes.Quotes[index]
 	fmt.Printf("\n\033[1m%10s\033[0m\n\n", quote.Text)
 	fmt.Printf("-- \033[4m%10s\033[0m\n\n", quote.Author)
